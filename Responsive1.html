@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+        <title>Responsive1</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            
+            body {
+                background-image: url(bg-intro-desktop.png);
+                background-color: rgb(200, 47, 13);
+            }
+
+            main {
+                display: flex;
+                gap: 40px;
+                max-width: 900px;
+                width: 100%;
+                height: auto;
+                font-family: Arial, sans-serif;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 5%;
+                margin-bottom: 5%;
+                transform: translate(-50% -50%);
+                box-sizing: border-box;
+            }
+
+            h1, p {
+                color: white;
+                opacity: 0.9;
+            }
+
+            main > div {
+                /* margin: 20px; */
+                flex: 1;
+                align-self: center;
+                justify-self: center;
+            }
+
+            form {
+                color: rgb(28, 28, 28);
+                background-color: rgb(241, 241, 241);
+                /* max-width: auto; */
+                width: 100%;
+
+                border-radius: 5px;
+                padding: 15px 0;
+            }
+
+            input {
+                width: 90%;
+                height: 40px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                margin-right: auto;
+                margin-left: auto;
+                display: block;
+                margin-top: 10px;
+                background-color: transparent;
+
+            }
+
+            button {
+                width: 90%;
+                display: block;
+                height: 40px;
+                background-color: rgb(63, 171, 63);
+                color: white;
+                border: none;
+                border-radius: 5px;
+                margin: 10px auto;
+            }
+
+            input[placeholder] {
+                padding: 10px;
+            }
+
+            input:focus {
+                border: 2px solid #ccc;
+                outline: none;
+            }
+
+            @keyframes try {
+                from {background-color: rgb(32, 1, 104);}
+                from {background-color: rgb(194, 233, 54);}
+            }
+
+            @media screen and (max-width: 768px) {
+                body {
+                    background-image: url(bg-intro-mobile);
+                }
+                
+                main {
+                    width: 100%;
+                    /* max-width: 400px; */
+                    margin: 0 auto;
+                    flex-direction: column;      
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div>
+                <h1 style="padding-right: 30px;">Learn to code by watching others</h1>
+                <p style="font-size: small; padding-right: 30px">See how experienced developers solve problem in real-time.
+                     watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
+            </div>
+            <div>
+                <p style="display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          background-color: rgb(32, 1, 104);
+                          opacity: 0.8;
+                          border-radius: 10px;
+                          height: 40px;
+                          animation-name: try;
+                          animation-duration: 1s;
+                          animation-iteration-count: infinite;
+                          animation-direction: alternate-reverse;"> 
+                          <span style="font-weight: bold; opacity: 1; margin-right: 4px;">Try it free 7 days </span>then $20/mo, thereafter</p>
+                <form action="#">
+                    <input type="text" name="fname" id="fname" placeholder="First name" required>
+                    <input type="text" name="lname" id="lname" placeholder="Last name" required>
+                    <input type="email" name="email" id="email" placeholder="Email Address" required>
+                    <input type="password" name="password" id="password" placeholder="Password" required minlength="6">
+                    <button type="submit">CLAIM YOUR FREE TRIAL</button>
+                    <p style="font-size: small;
+                              text-align: center; 
+                              color:rgb(148, 144, 144);">By clicking the button you are agreeing to our 
+                        <span style="color: rgb(200, 47, 13);">Terms and Services</span></p>
+                </form>
+            </div>
+        </main>
+    </body>  
+</html>
